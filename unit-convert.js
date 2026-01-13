@@ -32,6 +32,11 @@ const conversionData = {
         pint: 2.11338,
         cup: 4.22675,
         fluid_ounce: 33.814
+    },
+    currency: {
+        USD: 1,
+        EUR: 0.92,
+        GBP: 0.79
     }
 };
 
@@ -69,6 +74,11 @@ const unitOptions = {
         { value: 'pint', label: 'Pint (pt)' },
         { value: 'cup', label: 'Cup' },
         { value: 'fluid_ounce', label: 'Fluid Ounce (fl oz)' }
+    ],
+    currency: [
+        { value: 'USD', label: 'US Dollar (USD)' },
+        { value: 'EUR', label: 'Euro (EUR)' },
+        { value: 'GBP', label: 'British Pound (GBP)' }
     ]
 };
 

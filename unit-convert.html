@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter App</title>
     <link rel="stylesheet" href="unit-convert.css">
+    <script src="unit-convert.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -20,8 +21,61 @@
 
     <main class="container">
         <div class="converter-box">
-            <h2>Convert Units</h2>
-            <p>Welcome to the Unit Converter App</p>
+            <h2>Metric Converter</h2>
+            
+            <div class="converter-form">
+                <div class="form-group">
+                    <label for="conversion-type">Conversion Type</label>
+                    <select id="conversion-type" class="form-control">
+                        <option value="length">Length</option>
+                        <option value="weight">Weight</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="volume">Volume</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-value">Value</label>
+                    <input type="number" id="input-value" class="form-control" placeholder="Enter value" step="any">
+                </div>
+
+                <div class="conversion-row">
+                    <div class="form-group">
+                        <label for="from-unit">From</label>
+                        <select id="from-unit" class="form-control">
+                            <option value="meter">Meter (m)</option>
+                            <option value="kilometer">Kilometer (km)</option>
+                            <option value="centimeter">Centimeter (cm)</option>
+                            <option value="millimeter">Millimeter (mm)</option>
+                            <option value="mile">Mile (mi)</option>
+                            <option value="yard">Yard (yd)</option>
+                            <option value="foot">Foot (ft)</option>
+                            <option value="inch">Inch (in)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="to-unit">To</label>
+                        <select id="to-unit" class="form-control">
+                            <option value="meter">Meter (m)</option>
+                            <option value="kilometer">Kilometer (km)</option>
+                            <option value="centimeter">Centimeter (cm)</option>
+                            <option value="millimeter">Millimeter (mm)</option>
+                            <option value="mile">Mile (mi)</option>
+                            <option value="yard">Yard (yd)</option>
+                            <option value="foot">Foot (ft)</option>
+                            <option value="inch">Inch (in)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="convert-btn" class="convert-btn">Convert</button>
+
+                <div class="result-box" id="result-box">
+                    <h3>Result</h3>
+                    <p id="result-value">--</p>
+                </div>
+            </div>
         </div>
     </main>
 
